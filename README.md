@@ -70,14 +70,14 @@ This script connects to the OpenWeatherMap API, extracts weather data, transform
 
 ### 2. `weather_producer.py` - Kafka Producer
 
-The Kafka producer extracts weather data from `app.py`, transforms it, and sends it to the `weather_topic` Kafka topic. It sends data every 10 minutes (600 seconds). The key steps are:
+The Kafka producer extracts weather data from `app.py`, transforms it, and sends it to the `weather_topic` Kafka topic. It sends data every 3 minutes (180 seconds). The key steps are:
 
 - **Extract and Transform**: Fetch weather data and transform it.
 - **Produce to Kafka**: Send the transformed data to Kafka using the `confluent_kafka.Producer`.
 
 ### 3. `weather_consumer.py` - Kafka Consumer
 
-The Kafka consumer reads messages from the `weather_topic` Kafka topic and inserts the data into MongoDB. It consumes data continuously and processes it every 10 minutes. The key steps are:
+The Kafka consumer reads messages from the `weather_topic` Kafka topic and inserts the data into MongoDB. It consumes data continuously and processes it every 3 minutes. The key steps are:
 
 - **Consume from Kafka**: Read data from the `weather_topic`.
 - **Load to MongoDB**: Insert the consumed data into the MongoDB database for storage.
