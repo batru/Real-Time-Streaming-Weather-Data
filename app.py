@@ -22,7 +22,7 @@ def extract_data():
     # get API KEY
     KEY = os.getenv('WEATHER_KEY')
 
-    #load weeather data in Mombasa,KE from openweathermap
+    #load weeather data in Nairobi,KE from openweathermap
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={KEY}"
 
 

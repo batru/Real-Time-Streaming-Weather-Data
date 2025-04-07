@@ -33,4 +33,4 @@ while True:
 
         
 
-    time.sleep(600) #after 10 minutes
+    time.sleep(180) #after 3 minutes

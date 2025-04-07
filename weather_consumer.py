@@ -42,7 +42,7 @@ def delivery_report(err, msg):
 while True:
     try:
         # Poll for a message (timeout )
-        msg = consumer.poll(1.0)  # 1 second timeout
+        msg = consumer.poll(180.0)  # 3 minutes timeout
 
         if msg is None:
             print("No message received within the timeout period.")
@@ -65,7 +65,7 @@ while True:
             # Optional: You can print or handle the processed data here
             print(f"Processed data: {message_data}")
 
-            time.sleep(600) 
+            time.sleep(180) 
 
     
     except Exception as e:
